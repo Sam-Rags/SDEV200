@@ -5,17 +5,18 @@ public class Exercise06_31 {
 
     /** Return true if the card number is valid */
     public static boolean isValid(long number) {
-        
+        if(number % 10 == 0);
         return true;
-        
     }
 
     //Iterate the long number to process per digit as an int
     public void processLongAsInt(long number) {
         boolean shouldAdd = false;
+        int sum = 0;
         if(shouldAdd) {
             while (number != 0) { 
             int digit = (int)(number % 10);
+            sum += digit;
             shouldAdd = !shouldAdd;
             number /= 10;
             

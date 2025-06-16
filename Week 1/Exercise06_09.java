@@ -10,7 +10,7 @@
 
         /** Convert from meters to feet */
         public static double meterToFoot(double meter) {
-            double foot = 3.279 * meter;
+            double foot = 3.280839895 * meter;
             return foot;
         }
 
@@ -23,10 +23,10 @@
         "Meters", "Feet");
         
         //Loop to print dashes on the table
-        while (dashCount < 44) {
+        while (dashCount < 47) {
             System.out.print("-");
             dashCount += 1;
-            if (dashCount == 44)
+            if (dashCount == 47)
             System.out.print("\n");
         }
         
