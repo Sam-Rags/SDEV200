@@ -1,4 +1,3 @@
-package Week2;
 import Week2.MyDate;
 
 public class TestMyDate {
