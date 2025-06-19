@@ -1,14 +1,19 @@
+import java.util.Scanner;
+
 public class useBMIClass {
     public static void main(String[] args) {
+        // New scanner
+        Scanner input = new Scanner(System.in);
         BMI bmi1 = new BMI("Person 1", 18, 145, 70);
         System.out.println("The BMI for " + bmi1.getName() + " is " 
         + bmi1.getBMI() + " " + bmi1.getStatus());
     
         BMI bmi2 = new BMI("Person 2", 215, 70);
         System.out.println("The BMI for " + bmi2.getName() + " is " +
-            bmi2.getBMI() + " " + bmi2.getStatus());
+            bmi2.getBMI() + " " + bmi2.getStatus() + " and the age is: "
+            + bmi2.getAge());
 
-    }
+        }
 
 static class BMI { 
     private String name;
