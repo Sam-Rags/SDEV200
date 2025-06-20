@@ -1,4 +1,3 @@
-package Week2;
 import java.util.GregorianCalendar;
 import java.util.Calendar;
 import java.time.LocalDate;
