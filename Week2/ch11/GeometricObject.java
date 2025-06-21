@@ -1,4 +1,4 @@
-package Week2.exercise11dot1;
+
 
 // GeometricObject.java: The abstract GeometricObject class
 public abstract class GeometricObject {
