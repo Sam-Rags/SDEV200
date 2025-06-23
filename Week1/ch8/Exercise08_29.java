@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.Arrays;
 
 public class Exercise08_29 {
     public static void main(String[] args) {
@@ -18,6 +19,12 @@ public class Exercise08_29 {
                 System.out.print(m1[i][j] + "");
             }
             System.out.println();
-        }
+        
+
+
+         
     }    
+
+    }
 }
+
