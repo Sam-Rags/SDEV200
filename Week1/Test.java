@@ -1,22 +1,11 @@
-public class Test {
-    public static void main(String[] args) {
-        long number = 1234567891234L;
-        System.out.println(processLongAsInt(number));
-    }
+ public class Test {
+      public static void main(String[] args) {
+          Integer[] intArray = {1, 2, 3};
+          int i = intArray[0] + intArray[1];
+          int j = i + intArray[2];
+          double d = intArray[0];
 
-    public static long processLongAsInt(long n) {
-        boolean shouldAdd = true;
-        int sum = 0;
-        while(n != 0) {
-            int digit = (int)(n % 10);
-            if(shouldAdd) { 
-            sum += digit;        
-            System.out.println("The sum is: " + sum);
-            System.out.println("shouldAdd is: " + shouldAdd);
-            }
-            shouldAdd = !shouldAdd;
-            n /= 10;
-        }
-        return sum;
-}
+          System.out.println(" " + i + " " + j + " " + d);
+  }
+
 }
