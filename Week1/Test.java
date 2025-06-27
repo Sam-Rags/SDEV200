@@ -1,11 +1,20 @@
- public class Test {
-      public static void main(String[] args) {
-          Integer[] intArray = {1, 2, 3};
-          int i = intArray[0] + intArray[1];
-          int j = i + intArray[2];
-          double d = intArray[0];
-
-          System.out.println(" " + i + " " + j + " " + d);
+  interface A {
   }
 
-}
+  class C {
+  }
+
+  class D extends C {
+  }
+ class B extends D implements A {
+ }
+
+ public class Test {
+     public static void main(String[] args) {
+         B b = new B();
+         if (b instanceof A)
+             System.out.println("b is an instance of A");
+         if (b instanceof C)
+             System.out.println("b is an instance of C");
+     }
+ }
