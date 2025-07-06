@@ -317,12 +317,16 @@ class TwoWayLinkedList<E> implements MyList<E> {
 
   /** Add an element to the beginning of the list */
   public void addFirst(E e) {    
-    // WRITE YOUR CODE HERE
+    Node newNode = new Node(e);
+    newNode.next = head;
+    head = newNode;
   }
 
   /** Add an element to the end of the list */
   public void addLast(E e) {
-    // WRITE YOUR CODE HERE
+    Node newNode = new Node(e);
+    newNode.next = tail;
+    tail = newNode;
   }
 
   /**
@@ -330,7 +334,9 @@ class TwoWayLinkedList<E> implements MyList<E> {
    * head element is 0
    */
   public void add(int index, E e) {
-    // WRITE YOUR CODE HERE
+    Node newNode = new Node(e);
+    newNode.next = index;
+    index = newNode;
   }
 
   /**
@@ -338,7 +344,12 @@ class TwoWayLinkedList<E> implements MyList<E> {
    * removed node.
    */
   public E removeFirst() {
-    // Write your code here
+    if ( head == null ) {
+      return null;
+    }
+    E value = head.value;
+    head = head.next;
+    return value;
   }
 
   /**
@@ -346,7 +357,12 @@ class TwoWayLinkedList<E> implements MyList<E> {
    * removed node.
    */
   public E removeLast() {
-    // WRITE YOUR CODE HERE
+    if ( tail == null ) {
+      return null;
+    }
+    E value = tail.value;
+    tail = tail.next;
+    return value;
   }
 
   /**
@@ -354,6 +370,27 @@ class TwoWayLinkedList<E> implements MyList<E> {
    * element that was removed from the list.
    */
   public E remove(int index) {
-    // WRITE YOUR CODE HERE
+    if ( index < 0 || head == null ) {
+      return null;
+    }
+    if ( index == 0 ) {
+      return removeFirst();
+    }
+
+    Node current = head;
+    for (int i = 0; i < index - 1; i++) {
+      if (current.next == null) {
+        return null;
+      }
+      current = current.next;
+    }
+
+    Node nodeToRemove = current.next;
+    if (nodeToRemove == null) {
+      return null;
+    }
+
+    current.next = nodeToRemove.next;
+    return E.value;
   }
 }
