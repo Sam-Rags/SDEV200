@@ -14,21 +14,17 @@ public class TestStoreStrings {
 		
 		states.sort(null);
 		
-		for(String state:states) {
-			
-			if (StoreStrings.duplicateString(states)) {
-				System.out.println("Error! Contains more than one entry of the same state in the list. Must have only one entry for the state in the list");
-				break; // added break statement to keep from printing the error for every element in the list
-			} else {
-				System.out.println(state); // added semicolon to complete statement
-				
-		}
-			
+		/** moved the for each loop to the else statement which will now correctly print the outputs whether the list has duplicates or not */			
+		if (StoreStrings.duplicateString(states)) {
+			System.out.println("Error! Contains more than one entry of the same state in the list. Must have only one entry for the state in the list");
+		} else {
+			for (String state : states) {
+				System.out.println(state);
+			}; // added semicolon to complete statement
+			// the println method below now has some more information rather than just printing a digit
+			System.out.println("The number of unique states listed are: " + StoreStrings.count(states));
 		} 
-		/** moved this print statement to outside of for loop so it prints only once at the end
-		 * also added some text to clarify exactly what it's doing
-		 * */
-		System.out.println("The number of unique states listed are: " + StoreStrings.count(states)); 
+
 	}
 
 }
